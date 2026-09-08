@@ -100,8 +100,8 @@ catalogs:
       specifier: ^4.3.2
       version: 4.3.2
     postcss:
-      specifier: 8.5.23
-      version: 8.5.23
+      specifier: 8.5.24
+      version: 8.5.24
     tailwindcss:
       specifier: ^4.3.2
       version: 4.3.2
@@ -219,8 +219,8 @@ catalogs:
       specifier: ^0.3.2
       version: 0.3.2
     '@hono/node-server':
-      specifier: ^2.1.1
-      version: 2.1.1
+      specifier: ^1.19.15
+      version: 1.19.17
     '@hono/oauth-providers':
       specifier: ^0.8.8
       version: 0.8.8
@@ -228,8 +228,8 @@ catalogs:
       specifier: ^0.8.0
       version: 0.8.0
     hono:
-      specifier: ^4.13.5
-      version: 4.13.5
+      specifier: ^4.13.7
+      version: 4.13.7
     hono-sessions:
       specifier: ^0.8.1
       version: 0.8.1
@@ -704,10 +704,10 @@ importers:
         version: 16.1.1
       '@hono/oauth-providers':
         specifier: catalog:hono
-        version: 0.8.8(hono@4.13.5)
+        version: 0.8.8(hono@4.13.7)
       '@hono/zod-validator':
         specifier: catalog:hono
-        version: 0.8.0(hono@4.13.5)(zod@4.4.3)
+        version: 0.8.0(hono@4.13.7)(zod@4.4.3)
       '@hpcc-js/wasm-graphviz':
         specifier: catalog:externals
         version: 1.22.2
@@ -806,10 +806,10 @@ importers:
         version: 6.0.2
       hono:
         specifier: catalog:hono
-        version: 4.13.5
+        version: 4.13.7
       hono-sessions:
         specifier: catalog:hono
-        version: 0.8.1(hono@4.13.5)
+        version: 0.8.1(hono@4.13.7)
       import-meta-resolve:
         specifier: ^4.2.0
         version: 4.2.0
@@ -836,7 +836,7 @@ importers:
         version: 1.5.2
       postcss:
         specifier: catalog:css
-        version: 8.5.23
+        version: 8.5.24
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -1302,7 +1302,7 @@ importers:
         version: 1.72.0(oxlint-tsgolint@0.24.0)
       postcss:
         specifier: catalog:css
-        version: 8.5.23
+        version: 8.5.24
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
@@ -1935,7 +1935,7 @@ importers:
         version: 17.0.33
       autoprefixer:
         specifier: ^10.5.4
-        version: 10.5.4(postcss@8.5.23)
+        version: 10.5.4(postcss@8.5.24)
       birpc:
         specifier: catalog:vite
         version: 4.2.0
@@ -2001,7 +2001,7 @@ importers:
         version: 4.0.7
       postcss:
         specifier: catalog:css
-        version: 8.5.23
+        version: 8.5.24
       pretty-ms:
         specifier: ^9.3.0
         version: 9.3.0
@@ -2170,7 +2170,7 @@ importers:
         version: 1.114.17(@tanstack/react-router@1.114.27(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(supports-color@10.1.0)(vite@8.2.2(@types/node@22.19.19)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.5)(yaml@2.9.0))
       '@tsdown/css':
         specifier: catalog:tsdown
-        version: 0.23.0(jiti@2.7.0)(postcss@8.5.23)(tsdown@0.22.9)(tsx@4.22.5)(yaml@2.9.0)
+        version: 0.23.0(jiti@2.7.0)(postcss@8.5.24)(tsdown@0.22.9)(tsx@4.22.5)(yaml@2.9.0)
       '@types/node':
         specifier: 'catalog:'
         version: 22.19.19
@@ -2200,7 +2200,7 @@ importers:
         version: 0.0.82
       autoprefixer:
         specifier: ^10.5.4
-        version: 10.5.4(postcss@8.5.23)
+        version: 10.5.4(postcss@8.5.24)
       babel-plugin-react-compiler:
         specifier: catalog:react
         version: 1.0.0
@@ -2239,7 +2239,7 @@ importers:
         version: 7.3.2
       postcss:
         specifier: catalog:css
-        version: 8.5.23
+        version: 8.5.24
       react-error-boundary:
         specifier: catalog:react
         version: 6.1.4(@types/react@19.2.18)(react@19.2.8)
@@ -2382,10 +2382,10 @@ importers:
     dependencies:
       '@hono/mcp':
         specifier: catalog:hono
-        version: 0.3.2(@modelcontextprotocol/sdk@1.29.0(supports-color@10.1.0)(zod@4.4.3))(hono-rate-limiter@0.5.3(hono@4.13.5)(unstorage@1.17.5))(hono@4.13.5)(zod@4.4.3)
+        version: 0.3.2(@modelcontextprotocol/sdk@1.29.0(supports-color@10.1.0)(zod@4.4.3))(hono-rate-limiter@0.5.3(hono@4.13.7)(unstorage@1.17.5))(hono@4.13.7)(zod@4.4.3)
       '@hono/node-server':
         specifier: catalog:hono
-        version: 2.1.1(hono@4.13.5)
+        version: 1.19.17(hono@4.13.7)
       '@hpcc-js/wasm-graphviz':
         specifier: catalog:externals
         version: 1.22.2
@@ -2433,7 +2433,7 @@ importers:
         version: 0.28.1
       hono:
         specifier: catalog:hono
-        version: 4.13.5
+        version: 4.13.7
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -2985,7 +2985,7 @@ importers:
         version: 1.5.2
       postcss:
         specifier: catalog:css
-        version: 8.5.23
+        version: 8.5.24
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -3107,7 +3107,7 @@ importers:
         version: 2.1.0
       postcss:
         specifier: catalog:css
-        version: 8.5.23
+        version: 8.5.24
       react:
         specifier: 19.2.8
         version: 19.2.8
@@ -4802,15 +4802,9 @@ packages:
       hono-rate-limiter: ^0.5.3
       zod: ^3.25.0 || ^4.0.0
 
-  '@hono/node-server@1.19.14':
-    resolution: {integrity: sha512-GwtvgtXxnWsucXvbQXkRgqksiH2Qed37H9xHZocE5sA3N8O8O8/8FA3uclQXxXVzc9XBZuEOMK7+r02FmSpHtw==}
+  '@hono/node-server@1.19.17':
+    resolution: {integrity: sha512-dSneS5qhiauZWGDCeK4o695Xd9nUNjviSZCMQrj10eetr8Uln1ucn6bbphOM6UynAMMtNIzZNSpL9vnASJwrPQ==}
     engines: {node: '>=18.14.1'}
-    peerDependencies:
-      hono: ^4
-
-  '@hono/node-server@2.1.1':
-    resolution: {integrity: sha512-ELuehkj5VCBdgEw9zs+ivkKwyzzUCSQuE96YmiPvn1ECBoZCczbFXJLeEGMTYjphP6gydh4pHMqEYPVMYUVgQg==}
-    engines: {node: '>=20'}
     peerDependencies:
       hono: ^4
 
@@ -8466,8 +8460,8 @@ packages:
     peerDependencies:
       hono: ^4.0.0
 
-  hono@4.13.5:
-    resolution: {integrity: sha512-O6+/eCYRkzzzy0rPWwKLiGBR1nFuUPZynnwjxN1MBA62NNqbT0wQEzQyK2gSO5yDIDB336sXQleAhOHrzlYyKw==}
+  hono@4.13.7:
+    resolution: {integrity: sha512-c8/gF9ac8Y78/agExVocyLevgR+JlpNB444Py0FSX8pJoPdYUfUzRcXtYEYGwt6l19qIlVZPN5Mfsw9jFShmQQ==}
     engines: {node: '>=16.9.0'}
 
   hookable@6.1.1:
@@ -9857,8 +9851,8 @@ packages:
     resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.23:
-    resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
+  postcss@8.5.24:
+    resolution: {integrity: sha512-8RyVklq0owXUTa4xlpzu4l9AaVKIdQvAcOHZWaMh98HgySsUtxRVf/chRe3dsSLqb6i40BzGRzEUddRaI+9TSw==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.26:
@@ -13647,29 +13641,25 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@hono/mcp@0.3.2(@modelcontextprotocol/sdk@1.29.0(supports-color@10.1.0)(zod@4.4.3))(hono-rate-limiter@0.5.3(hono@4.13.5)(unstorage@1.17.5))(hono@4.13.5)(zod@4.4.3)':
+  '@hono/mcp@0.3.2(@modelcontextprotocol/sdk@1.29.0(supports-color@10.1.0)(zod@4.4.3))(hono-rate-limiter@0.5.3(hono@4.13.7)(unstorage@1.17.5))(hono@4.13.7)(zod@4.4.3)':
     dependencies:
       '@modelcontextprotocol/sdk': 1.29.0(supports-color@10.1.0)(zod@4.4.3)
-      hono: 4.13.5
-      hono-rate-limiter: 0.5.3(hono@4.13.5)(unstorage@1.17.5)
+      hono: 4.13.7
+      hono-rate-limiter: 0.5.3(hono@4.13.7)(unstorage@1.17.5)
       pkce-challenge: 5.0.1
       zod: 4.4.3
 
-  '@hono/node-server@1.19.14(hono@4.13.5)':
+  '@hono/node-server@1.19.17(hono@4.13.7)':
     dependencies:
-      hono: 4.13.5
+      hono: 4.13.7
 
-  '@hono/node-server@2.1.1(hono@4.13.5)':
+  '@hono/oauth-providers@0.8.8(hono@4.13.7)':
     dependencies:
-      hono: 4.13.5
+      hono: 4.13.7
 
-  '@hono/oauth-providers@0.8.8(hono@4.13.5)':
+  '@hono/zod-validator@0.8.0(hono@4.13.7)(zod@4.4.3)':
     dependencies:
-      hono: 4.13.5
-
-  '@hono/zod-validator@0.8.0(hono@4.13.5)(zod@4.4.3)':
-    dependencies:
-      hono: 4.13.5
+      hono: 4.13.7
       zod: 4.4.3
 
   '@hpcc-js/wasm-graphviz@1.22.2': {}
@@ -14260,7 +14250,7 @@ snapshots:
 
   '@modelcontextprotocol/sdk@1.29.0(supports-color@10.1.0)(zod@4.4.3)':
     dependencies:
-      '@hono/node-server': 1.19.14(hono@4.13.5)
+      '@hono/node-server': 1.19.17(hono@4.13.7)
       ajv: 8.20.0
       ajv-formats: 3.0.1(ajv@8.20.0)
       content-type: 1.0.5
@@ -14270,7 +14260,7 @@ snapshots:
       eventsource-parser: 3.0.6
       express: 5.2.1(supports-color@10.1.0)
       express-rate-limit: 8.3.1(express@5.2.1)
-      hono: 4.13.5
+      hono: 4.13.7
       jose: 6.1.3
       json-schema-typed: 8.0.2
       pkce-challenge: 5.0.1
@@ -15394,14 +15384,14 @@ snapshots:
       - yaml
     optional: true
 
-  '@tsdown/css@0.23.0(jiti@2.7.0)(postcss@8.5.23)(tsdown@0.22.9)(tsx@4.22.5)(yaml@2.9.0)':
+  '@tsdown/css@0.23.0(jiti@2.7.0)(postcss@8.5.24)(tsdown@0.22.9)(tsx@4.22.5)(yaml@2.9.0)':
     dependencies:
       lightningcss: 1.33.0
-      postcss-load-config: 6.0.1(jiti@2.7.0)(postcss@8.5.23)(tsx@4.22.5)(yaml@2.9.0)
+      postcss-load-config: 6.0.1(jiti@2.7.0)(postcss@8.5.24)(tsx@4.22.5)(yaml@2.9.0)
       rolldown: 1.2.7
       tsdown: 0.22.9(@tsdown/css@0.23.0)(tsx@4.22.5)(typescript@6.0.3)
     optionalDependencies:
-      postcss: 8.5.23
+      postcss: 8.5.24
     transitivePeerDependencies:
       - jiti
       - tsx
@@ -16178,13 +16168,13 @@ snapshots:
       stubborn-fs: 1.2.5
       when-exit: 2.1.4
 
-  autoprefixer@10.5.4(postcss@8.5.23):
+  autoprefixer@10.5.4(postcss@8.5.24):
     dependencies:
       browserslist: 4.28.6
       caniuse-lite: 1.0.30001806
       fraction.js: 5.3.4
       picocolors: 1.1.1
-      postcss: 8.5.23
+      postcss: 8.5.24
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -17631,19 +17621,19 @@ snapshots:
       minimalistic-assert: 1.0.1
       minimalistic-crypto-utils: 1.0.1
 
-  hono-rate-limiter@0.5.3(hono@4.13.5)(unstorage@1.17.5):
+  hono-rate-limiter@0.5.3(hono@4.13.7)(unstorage@1.17.5):
     dependencies:
-      hono: 4.13.5
+      hono: 4.13.7
     optionalDependencies:
       unstorage: 1.17.5
 
-  hono-sessions@0.8.1(hono@4.13.5):
+  hono-sessions@0.8.1(hono@4.13.7):
     dependencies:
-      hono: 4.13.5
+      hono: 4.13.7
       iron-webcrypto: 1.2.1
       ohash: 2.0.12
 
-  hono@4.13.5: {}
+  hono@4.13.7: {}
 
   hookable@6.1.1: {}
 
@@ -19187,12 +19177,12 @@ snapshots:
     dependencies:
       postcss: 8.5.14
 
-  postcss-load-config@6.0.1(jiti@2.7.0)(postcss@8.5.23)(tsx@4.22.5)(yaml@2.9.0):
+  postcss-load-config@6.0.1(jiti@2.7.0)(postcss@8.5.24)(tsx@4.22.5)(yaml@2.9.0):
     dependencies:
       lilconfig: 3.1.3
     optionalDependencies:
       jiti: 2.7.0
-      postcss: 8.5.23
+      postcss: 8.5.24
       tsx: 4.22.5
       yaml: 2.9.0
 
@@ -19245,7 +19235,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.23:
+  postcss@8.5.24:
     dependencies:
       nanoid: 3.3.18
       picocolors: 1.1.1
@@ -20419,7 +20409,7 @@ snapshots:
       tree-kill: 1.2.2
       unconfig-core: 7.5.0
     optionalDependencies:
-      '@tsdown/css': 0.23.0(jiti@2.7.0)(postcss@8.5.23)(tsdown@0.22.9)(tsx@4.22.5)(yaml@2.9.0)
+      '@tsdown/css': 0.23.0(jiti@2.7.0)(postcss@8.5.24)(tsdown@0.22.9)(tsx@4.22.5)(yaml@2.9.0)
       tsx: 4.22.5
       typescript: 6.0.3
     transitivePeerDependencies:
