@@ -35,6 +35,7 @@ overrides:
 
 patchedDependencies:
   "chroma-js@3.2.0": "patches/chroma-js@3.2.0.patch"
+  use-sync-external-store: patches/use-sync-external-store.patch
 
 catalog:
   "@changesets/changelog-github": ^1.0.1
@@ -53,7 +54,7 @@ catalog:
   oxlint: 1.87.0
   oxlint-tsgolint: 0.25.0
   pako: ^2.2.0
-  playwright: 1.60.0
+  playwright: 1.64.0
   rehype-prism-plus: 2.0.2
   skills-ref: 0.1.5
   tsx: 4.23.15
@@ -81,7 +82,7 @@ catalogs:
   astro:
     "@astrojs/check": 0.9.10
     "@astrojs/react": 6.0.6
-    "@astrojs/starlight": 0.41.3
+    "@astrojs/starlight": 0.42.6
     "@astrojs/starlight-tailwind": 5.0.0
     "@expressive-code/plugin-collapsible-sections": 0.44.2
     "@expressive-code/plugin-line-numbers": 0.44.2
@@ -90,7 +91,7 @@ catalogs:
     astro-skills: 0.1.1
     shiki: 4.5.0
     starlight-heading-badges: 0.8.0
-    starlight-image-zoom: 0.15.0
+    starlight-image-zoom: 0.16.1
     starlight-links-validator: 0.25.2
     starlight-package-managers: 0.12.0
   cloudflare:
@@ -104,6 +105,7 @@ catalogs:
     "@tailwindcss/vite": ^4.3.2
     postcss: 8.5.29
     tailwindcss: ^4.3.2
+    postcss-import: ^17.0.0
   esbuild:
     esbuild: 0.28.2
     esbuild-node-externals: 1.23.1
@@ -119,7 +121,7 @@ catalogs:
     fdir: 6.4.0
     nano-spawn: ^2.1.0
     picomatch: ^4.0.7
-    std-env: ^4.1.0
+    std-env: ^4.3.0
     type-fest: ^4.41.0
     zod: ^4.6.5
   hono:
@@ -175,8 +177,9 @@ catalogs:
     tsdown: ^0.23.0
     "@tsdown/css": ^0.23.0
     rolldown: ^1.2.13
+    oxc-transform-react: ^0.153.0
   utils:
-    "@logtape/logtape": ^2.4.0
+    "@logtape/logtape": ^2.4.1
     "@lume/kiwi": ^0.4.4
     "@types/chroma-js": ^3.1.2
     "@types/natural-compare-lite": ^1.4.2
@@ -209,7 +212,7 @@ catalogs:
     sharp: 0.35.5
     strip-indent: ^4.1.1
     superjson: ^2.2.6
-    tinyrainbow: ^3.1.1
+    tinyrainbow: ^3.2.0
     ufo: 1.6.4
     unctx: ^2.5.0
     unstorage: ^1.17.5

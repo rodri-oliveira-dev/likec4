@@ -23,6 +23,7 @@ import type {
   ThemeColor,
 } from '@likec4/core/types'
 import { exact } from '@likec4/core/types'
+import { isPlainObject } from 'remeda'
 import z from 'zod/v4'
 
 const opacity = z
@@ -57,6 +58,10 @@ const arrow = z
 const line = z
   .enum(['dashed', 'solid', 'dotted'])
   .meta({ id: 'LineType' })
+
+const routing = z
+  .enum(['spline', 'ortho'])
+  .meta({ id: 'EdgeRouting' })
 
 const themeColor = z
   .enum(ThemeColors)
@@ -225,6 +230,18 @@ const LikeC4Config_Styles_Defaults_Relationship = z
       'Override default values for relationship style properties\nThese values will be used if such property is not defined',
   })
 
+const LikeC4Config_Styles_Defaults_View = z
+  .strictObject({
+    routing: routing.optional().meta({
+      description:
+        'Default edge routing: `spline` for curves or `ortho` for right-angle bends.\nA view can override this default with its `routing` property or `autoLayout` routing parameter.',
+    }),
+  })
+  .meta({
+    id: 'ViewDefaultValues',
+    description: 'Default view settings.\nExplicit settings in a view override these defaults.',
+  })
+
 const LikeC4Config_Styles_Defaults = z
   .strictObject({
     color: color.optional().meta({
@@ -246,6 +263,9 @@ const LikeC4Config_Styles_Defaults = z
     relationship: LikeC4Config_Styles_Defaults_Relationship.optional().meta({
       description:
         'Override default values for relationship style properties\nThese values will be used if such property is not defined',
+    }),
+    view: LikeC4Config_Styles_Defaults_View.optional().meta({
+      description: 'Default view settings.\nExplicit settings in a view override these defaults.',
     }),
   })
   .meta({
@@ -272,7 +292,10 @@ export const LikeC4StylesConfigSchema = z
       description:
         'Override default values for style properties\nThese values will be used if such property is not defined',
     }),
-    customCss: LikeC4Config_Styles_CustomStylesheets.optional().meta({
+    customCss: z.preprocess(
+      denormalizeStylesheets,
+      LikeC4Config_Styles_CustomStylesheets,
+    ).optional().meta({
       description: 'Custom CSS (or list of CSS files) to be included in the generated diagrams',
     }),
   })
@@ -293,12 +316,26 @@ function normalizeDefaults(
   if (!defaults) {
     return undefined
   }
-  const { relationship, group, ...rest } = defaults
+  const { relationship, group, view, ...rest } = defaults
   return exact({
     ...rest,
     relationship: relationship && exact(relationship) satisfies LikeC4ProjectStyleDefaults['relationship'],
     group: group && exact(group) satisfies LikeC4ProjectStyleDefaults['group'],
+    view: view && exact(view) satisfies LikeC4ProjectStyleDefaults['view'],
   }) satisfies LikeC4ProjectStyleDefaults
+}
+
+/**
+ * Config can be validated more than once (e.g. `loadConfig` and then `ProjectsManager.registerProject`).
+ * Turns the output of {@link normalizeStylesheets} back into the list of paths, so that it passes validation again.
+ */
+function denormalizeStylesheets(
+  stylesheets: z.input<typeof LikeC4Config_Styles_CustomStylesheets> | LikeC4ProjectStylesCustomStylesheets,
+): unknown {
+  if (isPlainObject(stylesheets) && stylesheets.content === '' && Array.isArray(stylesheets.paths)) {
+    return stylesheets.paths
+  }
+  return stylesheets
 }
 
 function normalizeStylesheets(
